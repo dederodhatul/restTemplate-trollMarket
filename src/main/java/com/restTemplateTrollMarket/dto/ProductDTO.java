@@ -1,4 +1,4 @@
-package com.restTemplateTrollMarket;
+package com.restTemplateTrollMarket.dto;
 
 public class ProductDTO {
 

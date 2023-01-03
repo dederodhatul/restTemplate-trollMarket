@@ -1,4 +1,4 @@
-package com.restTemplateTrollMarket;
+package com.restTemplateTrollMarket.exceptionHandler;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,9 +20,12 @@ public class RestTemplateExceptionHandler {
 
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
-    @ExceptionHandler
-    public ResponseEntity<String> handleException(HttpStatusCodeException e) {
 
-        return new ResponseEntity<>(e.getResponseBodyAsString(), e.getStatusCode());
+    @ExceptionHandler
+    public ResponseEntity<Object> handleException(HttpStatusCodeException e) {
+        Object errorResponse = e.getResponseBodyAsString();
+        return new ResponseEntity<>(errorResponse, e.getStatusCode());
     }
+
+
 }

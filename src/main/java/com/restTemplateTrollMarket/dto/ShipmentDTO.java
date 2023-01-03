@@ -1,4 +1,4 @@
-package com.restTemplateTrollMarket;
+package com.restTemplateTrollMarket.dto;
 
 import java.math.BigDecimal;
 

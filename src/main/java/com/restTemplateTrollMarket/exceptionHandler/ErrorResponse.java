@@ -1,4 +1,4 @@
-package com.restTemplateTrollMarket;
+package com.restTemplateTrollMarket.exceptionHandler;
 
 public class ErrorResponse {
 
